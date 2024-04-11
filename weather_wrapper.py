@@ -37,7 +37,7 @@ class WeatherAPI:
             print(f"Error fetching weather data: {e}")
             return None
 
-api_key = os.environ.get("API_KEY")
+api_key = os.getenv("API_KEY")
 
 if not api_key:
     raise ValueError("API_KEY environment variable is not set.")
@@ -60,4 +60,4 @@ def get_weather():
         return jsonify({"error": "Weather data not found."}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
