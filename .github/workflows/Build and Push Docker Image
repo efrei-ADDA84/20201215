@@ -1,9 +1,5 @@
 name: Build and Push Docker Image
-
-on:
-  push:
-    branches-ignore:
-      - '*'  # Ignore toutes les branches (déclenche uniquement sur les commits)
+on: push
 
 jobs:
   build:
