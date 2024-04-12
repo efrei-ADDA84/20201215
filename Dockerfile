@@ -11,4 +11,4 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Définir la commande à exécuter lors du démarrage du conteneur
-CMD ["python", "weather_wrapper.py"]
+CMD ["python", "weather_API.py"]
