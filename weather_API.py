@@ -26,7 +26,7 @@ class WeatherAPI:
                 description = weather_data["description"]
 
                 return {
-                    "temperature": temp,
+                    "temperature": round(temp, 2),
                     "pressure": pressure,
                     "humidity": humidity,
                     "description": description
@@ -44,7 +44,7 @@ if not api_key:
 
 weather_api = WeatherAPI(api_key)
 
-@app.route('/weather', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_weather():
     latitude = request.args.get('lat')
     longitude = request.args.get('lon')
@@ -60,4 +60,4 @@ def get_weather():
         return jsonify({"error": "Weather data not found."}), 404
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8081, debug=True)
