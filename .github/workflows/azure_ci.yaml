@@ -1,4 +1,4 @@
-name: Azure ci
+name: Azure CI
 on: push
 
 jobs:
@@ -23,12 +23,12 @@ jobs:
       run: docker push efreidevops.azurecr.io/20201215:v1
 
     - name: Deploy to Azure Container Instances
-  uses: azure/aci-deploy@v1
-  with:
-    resource-group: ${{ secrets.RESOURCE_GROUP }}
-    dns-name-label: devops-20201215
-    image: efreidevops.azurecr.io/20201215:v1
-    registry-username: ${{ secrets.REGISTRY_USERNAME }}
-    registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-    name: 20201215
-    location: 'france central'
+      uses: azure/aci-deploy@v1
+      with:
+        resource-group: ${{ secrets.RESOURCE_GROUP }}
+        dns-name-label: devops-20201215
+        image: efreidevops.azurecr.io/20201215:v1
+        registry-username: ${{ secrets.REGISTRY_USERNAME }}
+        registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+        name: '20201215'
+        location: 'france central'
