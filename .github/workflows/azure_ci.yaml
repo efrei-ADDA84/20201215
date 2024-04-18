@@ -30,7 +30,7 @@ jobs:
     - name: Deploy to Azure Container Instances
       uses: azure/aci-deploy@v1
       with:
-        resource-group: ADDA84-CTP
+        resource-group: ${{ secrets.RESOURCE_GROUP }}
         dns-name-label: devops-20201215
         image: efreidevops.azurecr.io/20201215:v1
         registry-username: ${{ secrets.REGISTRY_USERNAME }}
