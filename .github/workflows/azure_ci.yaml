@@ -39,4 +39,4 @@ jobs:
         ports: 8081
         location: 'france central'
         environment-variables: |
-          API_KEY= ${{ secrets.API_KEY }}
+          API_KEY=cdb9a9ca136a8cfc779e9f352d452901
