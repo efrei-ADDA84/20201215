@@ -36,7 +36,6 @@ jobs:
         registry-username: ${{ secrets.REGISTRY_USERNAME }}
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         name: '20201215'
-        ports: 8081
         location: 'france central'
         environment-variables: |
           API_KEY=cdb9a9ca136a8cfc779e9f352d452901
