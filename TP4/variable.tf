@@ -3,7 +3,7 @@ variable "azure_subscription_id" {
 }
 
 variable "location" {
-  default = "france central"    
+  default = "france central"
 }
 
 variable "azure_resource_group_name" {
@@ -19,7 +19,7 @@ variable "subnet" {
 }
 
 variable "azure_vm_name" {
-  default = "devops-20201215_"
+  default = "devopss-20201215"
 }
 
 variable "user_admin" {
